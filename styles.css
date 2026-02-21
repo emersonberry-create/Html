@@ -1,0 +1,29 @@
+a {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+a:hover {
+    background-color: #FF0000;
+}
+
+.body {
+    flex: content;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.click:hover {
+    transform:rotate(36000deg);
+    transition:100s;
+}

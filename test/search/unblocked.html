@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Link Search</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; padding: 40px; max-width: 700px; margin: auto; background: #f9f9f9; }
+        .container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input { width: 75%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        button { padding: 12px 20px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #357ae8; }
+        #results { margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px; }
+        .link-item { margin-bottom: 12px; display: block; color: #1a0dab; text-decoration: none; word-break: break-all; }
+        .link-item:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Search Engine (Links Only)</h2>
+    <input type="text" id="query" placeholder="Search the whole web...">
+    <button onclick="fetchLinks()">Search</button>
+    <div id="results"></div>
+</div>
+
+<script>
+    // Get your key from https://serpapi.com
+    const SERP_API_KEY = 'YOUR_SERPAPI_KEY';
+
+    async function fetchLinks() {
+        const query = document.getElementById('query').value;
+        const resultsDiv = document.getElementById('results');
+        
+        if (!query) return;
+        resultsDiv.innerHTML = '<i>Searching Google...</i>';
+
+        // Note: Using a proxy or backend is required in production to avoid CORS/security issues
+        const url = `https://serpapi.comsearch.json?engine=google&q=${encodeURIComponent(query)}&api_key=${SERP_API_KEY}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            resultsDiv.innerHTML = ''; 
+
+            if (data.organic_results) {
+                data.organic_results.forEach(result => {
+                    const a = document.createElement('a');
+                    a.href = result.link;
+                    a.textContent = result.link;
+                    a.target = "_blank";
+                    a.className = 'link-item';
+                    resultsDiv.appendChild(a);
+                });
+            } else {
+                resultsDiv.innerHTML = 'No links found.';
+            }
+        } catch (error) {
+            resultsDiv.innerHTML = '<span style="color:red">Error: Make sure your API key is valid and check for CORS issues.</span>';
+        }
+    }
+</script>
+
+</body>
+</html>

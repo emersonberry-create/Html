@@ -1,0 +1,147 @@
+    <svg width="100%" height="100%" viewBox="0 0 100 100">
+        <rect fill="#0bc2cf" rx="10%" x="0" y="0" width="100%" height="100%"></rect>
+        <circle id="yellowCircle" cx="50" cy="50" fill="#FFEB3B">
+            <animate 
+                attributeName="r" 
+                from="30" 
+                to="40" 
+                dur="3s" 
+                repeatCount="indefinite" 
+                fill="freeze" 
+                values="30;40;30" 
+                keyTimes="0;0.5;1" 
+                calcMode="linear"
+            />
+        </circle>
+        <g id="triangleGroup">
+            <!-- Continuous slow rotation animation for the entire group around center 50,50 -->
+            <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="15s"
+                repeatCount="indefinite"
+            />
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri1">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri2" transform="rotate(12 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 3 (24 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri3" transform="rotate(24 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 4 (36 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri4" transform="rotate(36 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 5 (48 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri5" transform="rotate(48 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 6 (60 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri6" transform="rotate(60 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 7 (72 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri7" transform="rotate(72 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 8 (84 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri8" transform="rotate(84 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 9 (96 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri9" transform="rotate(96 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 10 (108 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri10" transform="rotate(108 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 11 (120 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri11" transform="rotate(120 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 12 (132 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri12" transform="rotate(132 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 13 (144 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri13" transform="rotate(144 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 14 (156 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri14" transform="rotate(156 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 15 (168 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri15" transform="rotate(168 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 16 (180 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri16" transform="rotate(180 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 17 (192 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri17" transform="rotate(192 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 18 (204 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri18" transform="rotate(204 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 19 (216 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri19" transform="rotate(216 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 20 (228 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri20" transform="rotate(228 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 21 (240 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri21" transform="rotate(240 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 22 (252 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri22" transform="rotate(252 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 23 (264 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri23" transform="rotate(264 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 24 (276 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri24" transform="rotate(276 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 25 (288 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri25" transform="rotate(288 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 26 (300 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri26" transform="rotate(300 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 27 (312 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri27" transform="rotate(312 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 28 (324 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri28" transform="rotate(324 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 29 (336 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFA500" id="tri29" transform="rotate(336 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+            <!-- Triangle 30 (348 degrees) -->
+            <polygon points="50,15 55,20 45,20" fill="#FFEB3B" id="tri30" transform="rotate(348 50 50)">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 0" dur="3s" repeatCount="indefinite" values="0 0; 0 -10; 0 0" keyTimes="0;0.5;1" calcMode="linear" additive="sum"/>
+            </polygon>
+
+        </g>
+    </svg>

@@ -1,0 +1,142 @@
+body { 
+    background: #111; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    overflow: hidden;
+    user-select: none; /* Prevents text highlighting while dragging */
+}
+
+#game-container { width: 800px; }
+svg { overflow: visible; transition: viewBox 0.8s ease-in-out; }
+
+/* Enable 3D depth for the whole kitchen */
+#kitchen-svg {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.interactive-group {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-box: fill-box;
+    cursor: pointer;
+}
+
+/* 3D Swing for Fridge and Cabinet (Left Hinge) */
+.hinge-left { transform-origin: left; }
+.open-door { 
+    transform: rotateY(-110deg); /* Swings OUT toward the player */
+}
+
+/* 3D Drop-down for Oven (Bottom Hinge) */
+.hinge-bottom { transform-origin: bottom; }
+.open-oven { 
+    transform: rotateX(-110deg); /* Drops DOWN like a real oven */
+}
+
+/* Smooth slide for drawers */
+.open-drawer { 
+    transform: translate(80px, 20px); 
+}
+/* Draggable item styles */
+.blook-item { cursor: grab; }
+.blook-item:active { cursor: grabbing; }
+.blook-item img { pointer-events: none; }
+.open-door { 
+    transform: perspective(400px) rotateY(-80deg); 
+    opacity: 0.7;
+}
+
+.open-oven { 
+    transform: perspective(400px) rotateX(80deg); 
+}
+
+/* Add a hover effect to show items are draggable */
+.blook-item:hover rect {
+    stroke: #fff;
+    stroke-width: 3px;
+    filter: brightness(1.1);
+}
+/* Add this to your styles.css */
+@keyframes shake {
+    0% { transform: translate(700px, 500px) rotate(0deg); }
+    25% { transform: translate(700px, 500px) rotate(8deg); }
+    50% { transform: translate(700px, 500px) rotate(-8deg); }
+    75% { transform: translate(700px, 500px) rotate(8deg); }
+    100% { transform: translate(700px, 500px) rotate(0deg); }
+}
+
+.shake-now {
+    animation: shake 0.3s ease-in-out !important;
+}
+
+.open-lid {
+    transform-origin: inherit right;
+    animation: openLid 2s both;
+}
+
+@keyframes open-lid {
+    0% { transform: translateY(0px) rotate(0deg); }
+    70% { transform: translateY(-70px) rotate(0deg); }
+    100% { transform: translateY(-100px) rotate(360deg); }    
+}
+
+/* Style for the Dev Tool Button */
+#dev-add-blook {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-image: linear-gradient(15deg, #000, #fff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+#back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-image: linear-gradient(15deg, #000, #fff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+    text-underline-offset: -500px;
+}
+
+@keyframes openLid {
+    0% { transform: scale(1)translate(0px,0px)rotate(0deg); }
+    100% { transform: scale(2)translate(-12px,-20px)rotate(90deg); }
+}
+#trash-lid {
+    transition: 2s;
+}
+g {
+    overflow: visible;
+    rx: 3;
+    display: block;
+}
+.blook-item {
+    transition: outline 0.2s; /* Don't transition transform, it breaks physics! */
+}
+
+/* Add a shadow underneath falling items for depth */
+.blook-item::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    transform: translateY(60px) rotate(360deg);
+    transition: 4s;
+}
