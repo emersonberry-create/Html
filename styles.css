@@ -10,6 +10,7 @@ a {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
+    transition: 20;
 }
 
 a:hover {
