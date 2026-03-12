@@ -1,0 +1,1 @@
+window.location("https://www.google.com/search?q=mewo")
