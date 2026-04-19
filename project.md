@@ -27,3 +27,6 @@ Only one confirmed skull of a narluga has ever been discovered and studied, foun
 in West Greenland in 1990. This unique specimen exhibited a peculiar dental structure,
 displaying teeth intermediate between the narwhal's single tusk and the beluga's characteristic
 dentition.
+
+# Pink Pineapple
+The "Pink Pineapple," specifically Del Monte's "Pinkglow" variety, is a genetically engineered fruit distinguished by its vibrant pink flesh, a crazy remake of the traditional yellow. This unique color was achieved through genetic engineering, where the pineapple was geneticly modified to suppress the enzymes that typically convert lycopene, the pigment responsible for red and pink hues in fruits like watermelon; into “beta-carotene”, allowing the lycopene to accumulate. The why in this development was market differentiation and consumer appeal, aiming to offer a visually novel and premium fruit experience. While regulatory bodies like the FDA have allowed it as “safe” for eating, broader public concerns often associated with GMOs can arise, including questions about long-term health effects or environmental impact, tho no specific, unique hazards have been scientifically linked to the Pink Pineapple itself.
